@@ -1,6 +1,8 @@
 # simpleLogInForm-Practice1-
 this is the practice 1, training us about ajax and javascript, jquery, json from AI 
-https://raw.githubusercontent.com/TuanNguyenVanAnh/simpleLogInForm-Practice1-/master/create-user-form-coach-js-01-850x384.png
+
+![Alt text](https://raw.githubusercontent.com/TuanNguyenVanAnh/simpleLogInForm-Practice1-/master/create-user-form-coach-js-01-850x384.png)
+
 this pictrue just a example 
 – User nhập đầy đủ nội dung vào form
 – Trừ field Address mọi field còn điều bắt buộc nhập , trường hợp user nhập thiếu sẽ show message thông báo.
