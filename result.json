@@ -1,9 +1,0 @@
-{
-    "error": {
-			"email" : "Bác Vũ thiếu email kìa",
-			"psw" : "bác thiếu mật khẩu nữa kìa",
-			"re_psw" : "Mật khẩu không giống nhau",
-			"name" : "Thiếu tên sao mà sống được"
-		},
-	"result" : "0"
-}
