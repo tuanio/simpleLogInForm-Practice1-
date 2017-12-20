@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <title>Javascript Suck!</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <body>
+        <form id="form" method="get" action="https://www.facebook.com">
+            <div id="container">
+                <h1>Signup Form</h1>
+                <div id="content">
+                    <label>Email</label> <span id="msg_email" class="warn"></span><br>
+                    <input type="text" class="txt" id="email" placeholder="name@example.com" size="50%"/><br>
+                        <br>
+                    <label>Password</label> <span id="msg_psw" class="warn"></span><br>
+                    <input type="password" class="txt" id="psw" placeholder="password"size="50%"/><br>
+                        <br>            
+                    <label>Confirm Password</label> <span id="msg_re_psw" class="warn"></span><br>
+                    <input type="password" class="txt" id="re_psw" placeholder="retype password"size="50%"/><br>
+                        <br>
+                    <label>Full Name</label> <span id="msg_name" class="warn"></span><br>
+                    <input type="text" class="txt" id="name" placeholder="Example Johnson"size="50%"/><br>
+                        <br>
+                    <label>Address</label> <br>
+                    <input type="text" class="txt" id="address" placeholder="100 example street, example district"size="50%"/><br>
+                        <br>
+                    <input type="checkbox"/> <label>Remember me</label> <br>
+                    <br>
+
+                    <span id="btn">
+                        <input type="submit"  id="cancel_link" onclick="return false" value="Cancel"/>
+                        <input type="submit"  id="signup_link" onclick="return validate()" value="Signup"/>
+                    </span>
+                </div>
+            </div>
+        </form>
+
+        <script type="text/javascript" src="jquery.min.js"></script>        
+        <script type="text/javascript" src="script.js"></script>
+        
+        <!-- Outer Wrapper-->
+    
+        <!--[if lte IE 9]>
+        <script type="text/javascript" src="assets/js/ie-scripts.js"></script>
+        <![endif]-->
+    </body>
+</html>
