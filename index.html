@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="style.css"/>
 
     <body>
-        <form id="form" method="get" action="https://www.facebook.com">
+        <form id="form" method="GET" action="javascript:void(0);" onsubmit="return validate()">
             <div id="container">
                 <h1>Signup Form</h1>
                 <div id="content">
@@ -30,14 +30,13 @@
                     <br>
 
                     <span id="btn">
-                        <input type="submit"  id="cancel_link" onclick="return false" value="Cancel"/>
-                        <input type="submit"  id="signup_link" onclick="return validate()" value="Signup"/>
+                        <input type="submit"  id="cancel_link" onclick="return false;" value="Cancel"/>
+                        <input type="submit"  id="signup_link" value="Signup"/>
                     </span>
                 </div>
             </div>
         </form>
 
-        <script type="text/javascript" src="jquery.min.js"></script>        
         <script type="text/javascript" src="script.js"></script>
         
         <!-- Outer Wrapper-->

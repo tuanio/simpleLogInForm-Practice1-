@@ -1,55 +1,38 @@
+async function validate() {
+    var email = document.querySelector('#email').value;
+    var psw = document.querySelector('#psw').value;
+    var re_psw = document.querySelector('#re_psw').value;
+    var name = document.querySelector('#name').value;
+    var msg_email = document.querySelector('#msg_email');
+    var msg_pass = document.querySelector("#msg_psw");
+    var msg_re_pass = document.querySelector('#msg_re_psw'); 
+    var msg_name = document.querySelector('#msg_name');
 
-function validate() {
-    var email = $("#email").val(); 
-    var psw = $("#psw").val();
-    var re_psw = $("#re_psw").val();
-    var name = $("#name").val();
-    var msg_email = $("#msg_email");
-    var msg_pass = $("#msg_psw");
-    var msg_re_pass = $("#msg_re_psw");
-    var msg_name = $("#msg_name");
-
-    var request = $.ajax({
-        url : "result.json",
-        type : "get", 
-        dataType : "json", 
-        data : {
-            email : email,
-            psw : psw,
-            re_psw : re_psw,
-            name : name
-        },
-    });
-    
+    var res = await fetch('result.json');
+    var result = await res.json();
     // this is the part for validate "sign up" form
     // if it ture, will be true and redirect to facebook
     // if it false, will be alert to span tag the same error.
+    let flag = true;
     if (email == "") {
-        request.done(function(result) {
-            msg_email.html(result.error.email);
-        });
-        return false;
+        msg_email.innerHTML = result.error.email;
+        flag = false;  
     } 
     
     if (psw == "") {
-        request.done(function(result) {
-            msg_pass.html(result.error.psw);
-        });
-        return false;
+        msg_pass.innerHTML = (result.error.psw);
+        flag = false;  
     } 
     if (re_psw != psw) {
-        request.done(function(result) {
-            msg_re_pass.html(result.error.re_psw);
-        });
-        return false;
+        msg_re_pass.innerHTML = result.error.re_psw;
+        flag = false;
     } 
     if (name == "") {
-        request.done(function(result) {
-            msg_name.html(result.error.name);
-        });
-        return false;
+        msg_name.innerHTML = (result.error.name);
+        flag = false;
     } else {
         alert("Đăng kí thành công!");
-        return true;
+        flag = true;
     } 
+    return flag;
 }
